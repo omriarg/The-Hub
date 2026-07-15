@@ -20,19 +20,22 @@ body {
 .navbar {
   background-color: #000;
   color: #fff;
-  padding: 30px 24px;
+  padding: 18px 32px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 1000;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -41,43 +44,84 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 4px;
 }
 
 .logo {
   font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 6px;
+  font-size: 23px;
+  letter-spacing: 0.3px;
 }
 
 .contact-info {
-  font-size: 14px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-link {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sep {
+  margin: 0 6px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 28px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-link {
-  color: #fff;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
+  font-size: 17px;
+  padding-bottom: 4px;
+  transition: color 0.15s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .nav-link.active {
+  color: #fff;
   font-weight: 700;
-  border-bottom: 2px solid #fff;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
 }
 
 /* CONTAINER */
@@ -87,7 +131,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.65);
-  padding: 180px 30px 40px 30px;
+  padding: 150px 30px 40px 30px;
 }
 
 .hero {
@@ -107,7 +151,7 @@ body {
 section {
   max-width: 1000px;
   margin: 0 auto 40px auto;
-  scroll-margin-top: 130px;
+  scroll-margin-top: 110px;
 }
 
 section h2 {
@@ -143,7 +187,7 @@ section h2 {
 
 .services-list li {
   margin-bottom: 14px;
-  scroll-margin-top: 130px;
+  scroll-margin-top: 110px;
 }
 
 .services-list li:target .service-title {
