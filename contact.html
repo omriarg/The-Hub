@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the-hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-contact">
+    <header class="navbar">
+      <nav class="nav-container">
+        <div class="logo-block">
+          <div class="logo">The Hub Philadelphia</div>
+          <div class="contact-info">
+            <a href="tel:+12678893009" class="contact-link">267-889-3009</a> |
+            <a href="mailto:Info@thp215.com" class="contact-link">Info@thp215.com</a>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html#about" class="nav-link" data-nav="about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-nav="services">Services</a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Contact</h2>
+        <p style="margin-bottom: 8px;">
+          Phone: <a href="tel:+12678893009" style="color:#000;">267-889-3009</a>
+        </p>
+        <p style="margin-bottom: 20px;">
+          Email: <a href="mailto:Info@thp215.com" style="color:#000;">Info@thp215.com</a>
+        </p>
+
+        <form id="contact-form" class="contact-form">
+          <label>
+            Name
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="senderEmail" name="senderEmail" placeholder="Your email" />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" name="message" placeholder="Tell us about your project or what you need" rows="6"></textarea>
+          </label>
+
+          <p id="form-error" class="form-error" hidden></p>
+          <p class="form-note">We will never spam you.</p>
+
+          <button type="submit" id="send-button">Send Message</button>
+
+          <p id="form-status-ok" class="form-status-ok" hidden>
+            Your email app should open with your message ready to send. If it doesn’t, email us directly at Info@thp215.com.
+          </p>
+          <p id="form-status-fail" class="form-status-fail" hidden>
+            Something went wrong. Please email us directly at Info@thp215.com.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
